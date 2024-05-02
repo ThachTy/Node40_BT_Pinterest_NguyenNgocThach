@@ -1,0 +1,255 @@
+{
+	"info": {
+		"_postman_id": "4bab5bb7-5d5c-4ea0-8ef7-18465a60b28d",
+		"name": "Capstone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33341909"
+	},
+	"item": [
+		{
+			"name": "User/ Get-All-Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{domain}}/user/get-all-users"
+			},
+			"response": []
+		},
+		{
+			"name": "User/ Get-User-By-userId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"userId\": \"29\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{domain}}/user/get-user-by-id"
+			},
+			"response": []
+		},
+		{
+			"name": "User/ Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin123\",\r\n    \"password\": \"admin123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{domain}}/user/register"
+			},
+			"response": []
+		},
+		{
+			"name": "User/ Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin121233\",\r\n    \"password\": \"admin123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{domain}}/user/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Comment/ Post Comments",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"4\",\r\n    \"imageId\": \"3\",\r\n    \"comment\": \"Hinh anh\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{domain}}/comment/post-comments"
+			},
+			"response": []
+		},
+		{
+			"name": "Image/ Get-All-Images",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{domain}}/image/get-all-images"
+			},
+			"response": []
+		},
+		{
+			"name": "Image/ Get-Images-By-Name",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Image 2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{domain}}/image/get-images-by-name"
+			},
+			"response": []
+		},
+		{
+			"name": "Image/ Delete-Images-By-ImageId",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"imageId\": \"3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{domain}}/image/delete-image-by-imageId"
+			},
+			"response": []
+		},
+		{
+			"name": "Image/ Get-Images-By-UserId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{domain}}/image/get-images-by-userId"
+			},
+			"response": []
+		},
+		{
+			"name": "Image/ Get-Detals-Image-Saved-By-ImageID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"2\",\r\n    \"imageId\": \"1\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{domain}}/image/get-details-image-saved-by-imageId"
+			},
+			"response": []
+		},
+		{
+			"name": "Comment/ Get-Comments-By-ImageID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{domain}}/comment/get-comments-by-imageId"
+			},
+			"response": []
+		},
+		{
+			"name": "Image/ Get-images-saved-by-userId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"userId\": \"5\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{domain}}/image/get-images-saved-by-userId"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
